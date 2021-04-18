@@ -12,7 +12,9 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        Analytics.shared().identify("123456789", traits: ["email": "edita@gmail.com", "name": "edita"])
+        Analytics.shared().track("Test Event", properties: ["property1": 1, "property2": 2])
+
     }
 
 
