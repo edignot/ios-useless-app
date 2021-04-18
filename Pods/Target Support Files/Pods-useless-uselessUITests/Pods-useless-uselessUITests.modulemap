@@ -1,0 +1,6 @@
+framework module Pods_useless_uselessUITests {
+  umbrella header "Pods-useless-uselessUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

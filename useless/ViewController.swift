@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Segment
 
 class ViewController: UIViewController {
 

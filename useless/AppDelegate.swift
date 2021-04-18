@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Segment
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -13,7 +14,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        let configuration = AnalyticsConfiguration(writeKey: "ASE9WdMSUliq9HJlCvpPUIWk1Mkwdmh4")
+        configuration.trackApplicationLifecycleEvents = true // Enable this to record certain application events automatically!
+        configuration.recordScreenViews = true // Enable this to record screen views automatically!
+        configuration.flushAt = 1
+        Analytics.setup(with: configuration)
         return true
     }
 
